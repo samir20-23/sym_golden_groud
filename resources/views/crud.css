@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #4A90E2;
+  /* Main accent color */
+  --color2: #ffb56c;
+  /* Secondary accent */
+  --color3: #F4F6F9;
+  /* Background color */
+  --color4: #D1D5DB;
+  /* Border color */
+  --color5: #333333;
+  /* Primary text color */
+  --color6: #666666;
+  /* Secondary text color */
+  --color7: #4CAF50;
+  /* Success state color */
+  --color8: #FFC107;
+  /* Warning state color */
+  --color9: #F44336;
+  /* Danger state color */
+}
+
+.main-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--color2);
+  border-radius: 12px;
+  padding: 50px;
+  position: re;
+}
+h1 { 
+  font-weight: bold;
+    background-image: url('tools/imgs/gold.jpeg');
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1px 2px 2px var(--color6);
+}
+
+#main-table {
+  border: 3px solid var(--color2);
+  border-radius: 12px;
+  box-shadow: 0 0 114px -60px inset var(--color2); 
+}
+
+thead tr th {
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+tbody tr {
+  border: 2px solid var(--color2);
+  border-radius: 12px;
+}
+
+tbody tr td input { 
+  border: 1px solid var(--color2);
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+tbody tr td   img {
+  width: 100%;
+  min-width: 50px;
+  max-width: 100px;
+  border-radius: 20px;
+}
+ 
+th,
+td input {
+  padding: 12px;
+  border: 1px solid var(--color2);
+  border-radius: 12px;
+  text-align: left;
+}
+
+
+
+
+/* responsive */
+@media (max-width: 600px) {
+
+  table, thead, tbody, th, td, tr, input {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  td, input {
+    display: block;
+    padding-left: 50%;
+    position: relative;
+    text-align: right;
+    width: 100%;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  input {
+    padding: 8px;
+  }
+}
